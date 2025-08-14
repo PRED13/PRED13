@@ -1,0 +1,154 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochilas y Maletas</title>
+    <link rel="stylesheet" href="mochilas.css">
+</head>
+
+<style>
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.producto {
+    width: 220px;
+    height: 320px; /* todas del mismo alto */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: 200px; /* igual altura para todas las imágenes */
+    object-fit: contain; /* mantiene proporción sin recortar ni deformar */
+    border-radius: 5px;
+}
+
+.producto p {
+    margin: 5px 0;
+}
+
+.precio {
+    font-weight: bold;
+    color: #e60000;
+}
+
+.btn-compra {
+    background-color: #ff9900; /* Naranja estilo Amazon */
+    color: #111;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 14px;
+}
+
+.btn-compra:hover {
+    background-color: #e68a00;
+}
+</style>
+
+<body>
+    <header>
+        <h1>Promoción de Mochilas, Maletas y Bolsas</h1>
+    </header>
+
+    <main>
+        <section class="productos">
+
+            <!-- Maletas  -->
+            <div class="producto">
+            <img src="https://th.bing.com/th/id/OIP.78fzQO-fq65HbK8JIEh-vQHaHa?w=213&h=213&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Maleta 2">
+            <p>Maleta Kipling</p>
+            <p class="precio">$2,500</p>
+            <a href="v2.html"><button class="btn-compra">Comprar</button></a>
+            </div>
+            <div class="producto">
+            <img src="https://th.bing.com/th/id/OIP.LzSYYNRADfvsHsvS5mJgkgHaHa?w=187&h=187&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Maleta 7">
+            <p>Maleta deportiva</p>
+            <p class="precio">$1,050</p>
+            <a href="v2.html"><button class="btn-compra">Comprar</button></a>
+            </div>
+            <div class="producto">
+            <img src="https://th.bing.com/th/id/OIP.EffNwfnAyiFCKz88Wq5TNQHaFj?w=255&h=192&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Maleta 8">
+            <p>Maleta infantil</p>
+            <p class="precio">$1,200</p>
+            <a href="v2.html"><button class="btn-compra">Comprar</button></a>
+            </div>
+
+            <!-- Mochilas -->
+            <div class="producto">
+            <img src="https://th.bing.com/th/id/OIP.IQHu4uox1aCUXibI779qtAHaHa?w=208&h=208&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Mochila 2">
+            <p>Mochila Kipling</p>
+            <p class="precio">$980</p>
+            <a href="v2.html"><button class="btn-compra">Comprar</button></a>
+            </div>
+            <div class="producto">
+            <img src="https://th.bing.com/th/id/OIP.xhAN5xE5Ou8XKhZo-2UqOgHaJ2?w=142&h=190&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Mochila 3">
+            <p>Mochila puma</p>
+            <p class="precio">$850</p>
+            <a href="v2.html"><button class="btn-compra">Comprar</button></a>
+            </div>
+            <div class="producto">
+            <img src="https://th.bing.com/th/id/OIP.4CZ1oBkkhGSmKRTH8A26MgHaJ2?w=140&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Mochila 4">
+            <p>Mochila adidas</p>
+            <p class="precio">$890</p>
+            <a href="v2.html"><button class="btn-compra">Comprar</button></a>
+            </div>
+
+            <!-- Bolsas -->
+            <div class="producto">
+            <img src="https://th.bing.com/th/id/OIP.spcJxwA9tLDuakuJ81nnawHaHa?w=212&h=211&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Bolsa 1">
+            <p>Bolsa de mano elegante</p>
+            <p class="precio">$600</p>
+            <a href="v2.html"><button class="btn-compra">Comprar</button></a>
+            </div>
+            <div class="producto">
+            <img src="https://th.bing.com/th/id/OIP.5vTyYel6dLlQ2bqDO61dTgHaGq?w=196&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Bolsa Mochila Moderna">
+            <p>Bolsa y mochila moderna</p>
+            <p class="precio">$640</p>
+            <a href="v2.html"><button class="btn-compra">Comprar</button></a>
+            </div>
+            <div class="producto">
+            <img src="https://th.bing.com/th/id/OIP.AZzkLYqE0FyySbbjRMX35AHaIa?w=165&h=187&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Bolsa Tote Casual">
+            <p>Bolsa tote casual</p>
+            <p class="precio">$450</p>
+            <a href="v2.html"><button class="btn-compra">Comprar</button></a>
+            </div>
+            <div class="producto">
+            <img src="https://th.bing.com/th/id/OIP.GJY3En_snIHO8xMy3ke9TwHaGj?w=190&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Bolsa Bandolera Juvenil">
+            <p>Bolsa bandolera juvenil</p>
+            <p class="precio">$380</p>
+            <a href="v2.html"><button class="btn-compra">Comprar</button></a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

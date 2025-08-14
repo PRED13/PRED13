@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amazon</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+/* styles.css */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Segoe UI, Roboto, Arial, sans-serif; background: #f3f3f3; color: #111; }
+.topbar { background: #131921; color: #fff; padding: 12px 20px; display: flex; align-items: center; gap: 16px; }
+.logo { font-weight: 700; font-size: 20px; }
+.search { flex: 1; display: flex; }
+.search input { flex: 1; padding: 10px; border-radius: 4px 0 0 4px; border: 1px solid #ddd; }
+.search button { padding: 10px 14px; border: none; background: #febd69; border-radius: 0 4px 4px 0; cursor: pointer; }
+.container { max-width: 1200px; margin: 20px auto; padding: 0 12px; }
+.breadcrumb { font-size: 14px; color: #555; margin-bottom: 12px; }
+.layout { display: grid; grid-template-columns: 260px 1fr; gap: 18px; }
+.sidebar { background: #fff; padding: 16px; border-radius: 6px; border: 1px solid #e6e6e6; }
+.filter h4 { font-size: 14px; margin-bottom: 8px; color: #333; }
+.filter .option { font-size: 14px; padding: 8px 0; border-bottom: 1px solid #f1f1f1; }
+.results-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.results-count { color: #555; }
+.sort { background: #fff; padding: 8px; border-radius: 6px; border: 1px solid #e6e6e6; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.card { background: #fff; border-radius: 6px; padding: 12px; border: 1px solid #e6e6e6; display: flex; flex-direction: column; gap: 8px; }
+.card img { width: 100%; height: 180px; object-fit: contain; background: linear-gradient(#fff, #f8f8f8); }
+.title { font-size: 14px; line-height: 1.2; color: #111; height: 38px; overflow: hidden; }
+.price { font-size: 16px; font-weight: 700; color: #b12704; }
+.oldprice { font-size: 13px; color: #777; text-decoration: line-through; }
+.rating { font-size: 13px; color: #555; }
+.buy { margin-top: auto; display: flex; gap: 8px; }
+.btn { flex: 1; padding: 8px; border-radius: 4px; border: none; cursor: pointer; }
+.btn.cart { background: #ffd814; }
+.btn.details { background: #f0f0f0; }
+@media (max-width: 700px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { order: 2; }
+}
+</style>
+
+<body>
+  <header class="topbar">
+    <div class="logo">Amazon</div>
+    <form class="search" onsubmit="return false;">
+      <input aria-label="Buscar" placeholder="Buscar productos, marcas y más" />
+      <button aria-label="Buscar">Buscar</button>
+    </form>
+    <div class="account">Cuenta</div>
+  </header>
+  <main class="container">
+    <div class="breadcrumb">Inicio &gt; Todos los productos</div>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="filter">
+          <h4>Filtrar por</h4>
+          <div class="option"><input type="checkbox" id="envio"/> <label for="envio">Envío gratis</label></div>
+          <div class="option"><input type="checkbox" id="ofertas"/> <label for="ofertas">En oferta</label></div>
+        </div>
+        <div style="height:12px"></div>
+        <div class="filter">
+          <h4>Talla</h4>
+          <div class="option">S</div>
+          <div class="option">M</div>
+          <div class="option">L</div>
+          <div class="option">XL</div>
+          <div class="option">25</div>
+          <div class="option">26</div>
+          <div class="option">27</div>
+        </div>
+      </aside>
+      <section>
+        <div class="results-header">
+          <div class="results-count">Mostrando 1-12 de 1,500 resultados</div>
+          <div class="sort">
+            Ordenar por: 
+            <select>
+              <option>Más relevantes</option>
+              <option>Precio: menor a mayor</option>
+              <option>Precio: mayor a menor</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid">
+
+          <!-- Zapatos -->
+          <article class="card">
+            <img src="https://contents.mediadecathlon.com/p2212540/k$405af46a61dab0d9580932b9dddf1926/tenis-de-trail-running-para-hombre-xt8-negro-y-gris.jpg?format=auto&quality=40&f=800x800" alt="Tenis Deportivos"/>
+            <div class="title">Tenis Deportivos Hombre - Modelo Trail</div>
+            <div class="rating">★★★★☆ (1,234)</div>
+            <div class="price">$1,299.00 <span class="oldprice">$1,799.00</span></div>
+            <a href="v2.html"><button class="btn cart">Comprar</button></a>
+          </article>
+          <article class="card">
+            <img src="https://resources.claroshop.com/medios-plazavip/s2/10996/1300667/5e221435e2cc8-4649838a-a4eb-4fce-ad66-a6b70f8478b3-1600x1600.jpg" alt="Zapatos Casuales"/>
+            <div class="title">Zapatos Casuales Mujer - Piel genuina</div>
+            <div class="rating">★★★☆☆ (432)</div>
+            <div class="price">$899.00</div>
+            <a href="v2.html"><button class="btn cart">Comprar</button></a>
+          </article>
+
+          <!-- Ropa -->
+          <article class="card">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.geiKmUWVrSeDhRpAMg8lNAHaHa?r=0&w=2495&h=2495&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sudadera Azul"/>
+            <div class="title">Sudadera Unisex Azul - Con capucha</div>
+            <div class="rating">★★★★★ (1,050)</div>
+            <div class="price">$599.00</div>
+            <a href="v2.html"><button class="btn cart">Comprar</button></a>
+          </article>
+          <article class="card">
+            <img src="https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00750627986239L.jpg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Blusa Floral"/>
+            <div class="title">Blusa Floral Mujer - Talla M</div>
+            <div class="rating">★★★★☆ (870)</div>
+            <div class="price">$450.00</div>
+            <a href="v2.html"><button class="btn cart">Comprar</button></a>
+          </article>
+
+          <!-- Calcetines -->
+          <article class="card">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.PXqVldU6Q7MVxtJ_IVgvtgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Calcetines Deportivos"/>
+            <div class="title">Calcetines Deportivos Pack x3</div>
+            <div class="rating">★★★★☆ (560)</div>
+            <div class="price">$199.00</div>
+            <a href="v2.html"><button class="btn cart">Comprar</button></a>
+          </article>
+
+          <!-- Más productos variados -->
+          <article class="card">
+            <img src="https://i5.walmartimages.com.mx/mg/gm/3pp/asr/2b3e6193-a3e3-448c-9d5e-cf35c5d5c053.2b34cb7f4c64857ce516d86d74e683d4.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Tenis Running"/>
+            <div class="title">Tenis Running Hombre - Tecnología avanzada</div>
+            <div class="rating">★★★★★ (2,000)</div>
+            <div class="price">$1,799.00</div>
+            <a href="v2.html"><button class="btn cart">Comprar</button></a>
+          </article>
+          <article class="card">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_644875-MLM45610315912_042021-F.jpg" alt="Tenis Running"/>
+            <div class="title">Tenis Blancos Hombre - Moda avanzada</div>
+            <div class="rating">★★★★★ (2,000)</div>
+            <div class="price">$1,799.00</div>
+            <a href="v2.html"><button class="btn cart">Comprar</button></a>
+          </article>
+          <article class="card">
+            <img src="https://img.kwcdn.com/thumbnail/s/45e06ed6368ef44e6381e38e8015dd41_ba56f1489adc.jpg?imageView2/2/w/264/q/70/format/webp" alt="Sudadera Roja"/>
+            <div class="title">Sudadera Roja Mujer - Con bolsillo frontal</div>
+            <div class="rating">★★★☆☆ (300)</div>
+            <div class="price">$550.00</div>
+            <a href="v2.html"><button class="btn cart">Comprar</button></a>
+          </article>
+
+          <article class="card">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.J5T6lYLmW7yvLi7JTW1ZIgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Calcetines Casual"/>
+            <div class="title">Calcetines Casual Pack x5</div>
+            <div class="rating">★★★★☆ (450)</div>
+            <div class="price">$220.00</div>
+            <a href="v2.html"><button class="btn cart">Comprar</button></a>
+          </article>
+          <article class="card">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.5nvvPi45eOs76mRpLEPgMAHaJ_?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Blusa Verde"/>
+            <div class="title">Blusa Verde Mujer - Manga larga</div>
+            <div class="rating">★★★★☆ (720)</div>
+            <div class="price">$480.00</div>
+            <a href="v2.html"><button class="btn cart">Comprar</button></a>
+          </article>
+
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

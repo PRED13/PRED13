@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+/* Barra superior Amazon */
+.amazon-header {
+    font-family: Arial, sans-serif;
+}
+
+/* Parte superior */
+.top-bar {
+    background-color: #131921;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 15px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.location {
+    font-size: 12px;
+}
+
+.location a {
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.search {
+    display: flex;
+    flex: 1;
+    max-width: 600px;
+}
+
+.search select {
+    padding: 5px;
+    border: none;
+    background-color: #f3f3f3;
+}
+
+.search input {
+    flex: 1;
+    padding: 5px;
+    border: none;
+}
+
+.search button {
+    background-color: #febd69;
+    border: none;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.account, .orders, .cart {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Menú inferior */
+.nav-bar {
+    background-color: #232f3e;
+    display: flex;
+    padding: 5px 10px;
+    gap: 15px;
+}
+
+.nav-bar a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff;
+}
+
+.titulo {
+    font-size: 24px;
+    padding: 20px;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: white;
+    position: relative;
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+.producto:hover {
+    transform: scale(1.03);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+.ranking {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    padding: 3px 7px;
+    border-radius: 3px;
+}
+
+h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.precio {
+    color: #B12704;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Botón amarillo estilo Amazon */
+.boton-comprar {
+    display: inline-block;
+    background-color: #FFD814;
+    border: 1px solid #FCD200;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0F1111;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.boton-comprar:hover {
+    background-color: #F7CA00;
+}
+</style>
+
+<body>
+    <!-- Barra superior estilo Amazon -->
+<header class="amazon-header">
+    <div class="top-bar">
+        <div class="logo">
+            <img src="img/amazon-logo.png" alt="Amazon">
+        </div>
+        <div class="location">
+            <span>Entrega en Jilotepec... 54240</span><br>
+            <a href="#">Actualizar ubicación</a>
+        </div>
+        <div class="search">
+            <select>
+                <option>Hogar y cocina</option>
+                <option>Electrónicos</option>
+                <option>Libros</option>
+            </select>
+            <input type="text" placeholder="Buscar en Amazon.com.mx">
+            <button>🔍</button>
+        </div>
+        <div class="account">
+            <span>Hola, identifícate</span><br>
+            <strong>Cuenta y Listas</strong>
+        </div>
+        <div class="orders">
+            <strong>Devoluciones</strong><br>
+            y Pedidos
+        </div>
+        <div class="cart">
+            🛒 Carrito
+        </div>
+    </div>
+    <nav class="nav-bar">
+        <a href="#">Todo</a>
+        <a href="#">Vender</a>
+        <a href="#">Los más vendidos</a>
+        <a href="#">AmazonBasics</a>
+        <a href="#">Amazon Súper</a>
+        <a href="#">Promociones</a>
+        <a href="#">Prime</a>
+        <a href="#">Música</a>
+        <a href="#">Lo nuevo</a>
+        <a href="#">Moda</a>
+    </nav>
+</header>
+
+<h2 class="titulo">Los más vendidos en Cocina</h2>
+
+<div class="contenedor-productos">
+
+    <div class="producto">
+        <span class="ranking">#1</span>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71h1c2O8WFL._AC_UL600_SR600,400_.jpg" alt="Juego de Recipientes de Vidrio">
+        <h3>Juego de Recipientes de Vidrio</h3>
+        <p class="precio">$559.99</p>
+        <a href="v2.html"><button class="boton-comprar">Comprar</button></a>
+    </div>
+
+    <div class="producto">
+        <span class="ranking">#2</span>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/311njq5mJyL._AC_UL600_SR600,400_.jpg" alt="Taza Térmica de Acero Inoxidable">
+        <h3>Taza Térmica de Acero Inoxidable</h3>
+        <p class="precio">$705.84</p>
+        <a href="v2.html"><button class="boton-comprar">Comprar</button></a>
+    </div>
+
+    <div class="producto">
+        <span class="ranking">#3</span>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71cmPkqwu4L._AC_UL600_SR600,400_.jpg" alt="Contenedores Plásticos con Etiquetas">
+        <h3>Contenedores Plásticos con Etiquetas</h3>
+        <p class="precio">$379.00</p>
+        <a href="v2.html"><button class="boton-comprar">Comprar</button></a>
+    </div>
+
+    <div class="producto">
+        <span class="ranking">#4</span>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71VQd7fdvZL._AC_UL600_SR600,400_.jpg" alt="Set Jumbo de Recipientes de Vidrio">
+        <h3>Set Jumbo de Recipientes de Vidrio</h3>
+        <p class="precio">$1,399.99</p>
+        <a href="v2.html"><button class="boton-comprar">Comprar</button></a>
+    </div>
+
+    <div class="producto">
+        <span class="ranking">#5</span>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/61VV5yIIgtL._AC_UL600_SR600,400_.jpg" alt="Termo de Acero Inoxidable">
+        <h3>Termo de Acero Inoxidable</h3>
+        <p class="precio">$304.30</p>
+        <a href="v2.html"><button class="boton-comprar">Comprar</button></a>
+    </div>
+
+    <div class="producto">
+        <span class="ranking">#6</span>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/41qmSl0ixEL._AC_UL600_SR600,400_.jpg" alt="Licuadora Portátil Recargable">
+        <h3>Licuadora Portátil Recargable</h3>
+        <p class="precio">$579.00</p>
+        <a href="v2.html"><button class="boton-comprar">Comprar</button></a>
+    </div>
+
+    <div class="producto">
+        <span class="ranking">#7</span>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71eiII6MS-L._AC_UL600_SR600,400_.jpg" alt="Báscula Digital de Cocina">
+        <h3>Báscula Digital de Cocina</h3>
+        <p class="precio">$259.90</p>
+        <a href="v2.html"><button class="boton-comprar">Comprar</button></a>
+    </div>
+
+    <div class="producto">
+        <span class="ranking">#8</span>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/61154mhGSOL._AC_UL600_SR600,400_.jpg" alt="Espumador Eléctrico Recargable">
+        <h3>Espumador Eléctrico Recargable</h3>
+        <p class="precio">$199.99</p>
+        <a href="v2.html"><button class="boton-comprar">Comprar</button></a>
+    </div>
+
+    <div class="producto">
+        <span class="ranking">#9</span>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71J0cdekJQL._AC_UL600_SR600,400_.jpg" alt="Set de Sartenes de Acero Inoxidable">
+        <h3>Set de Sartenes de Acero Inoxidable</h3>
+        <p class="precio">$499.99</p>
+        <a href="v2.html"><button class="boton-comprar">Comprar</button></a>
+    </div>
+
+    <div class="producto">
+        <span class="ranking">#10</span>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81lGiOYo8DL._AC_UL600_SR600,400_.jpg" alt="Ninja Licuadora Profesional con 4 velocidades">
+        <h3>Ninja Licuadora Profesional con 4 velocidades</h3>
+        <p class="precio">$899.99</p>
+        <a href="v2.html"><button class="boton-comprar">Comprar</button></a>
+    </div>
+
+</div>
+
+</body>
+</html>
