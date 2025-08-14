@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-header {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .card-header h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .card-content {
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            flex-grow: 1;
+        }
+
+        .product {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        
+        .product-large img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .product-info {
+            text-align: left;
+            margin-top: auto;
+        }
+
+        .product-info p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .price {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-top: 5px;
+        }
+        
+        .discount {
+            background-color: #e53935;
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .promotion-product {
+            position: relative;
+        }
+        
+        .promotion-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .promotion-grid-item {
+            position: relative;
+        }
+
+        .promotion-grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .full-width-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .sport-product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .sport-product-grid .product {
+            text-align: center;
+        }
+
+        .sport-product-grid .product img {
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .bag-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        
+        .bag-product {
+            text-align: center;
+        }
+
+        .bag-product img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .bag-product p {
+            font-size: 0.8em;
+            color: #555;
+        }
+
+        .card-footer {
+            padding: 15px;
+            text-align: right;
+            border-top: 1px solid #eee;
+        }
+
+        .card-footer a {
+            text-decoration: none;
+            color: #007185;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Seguir comprando</h2>
+            </div>
+            <div class="card-content">
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/41-N0L2FhVL._AC_SY400_.jpg" alt="Owala FreeSip Botella">
+                    <div class="product-info">
+                        <p>Owala FreeSip-Botella</p>
+                        <p class="price">$773.56</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/415N-YyN3yL._AC_SY400_.jpg" alt="Owala Vaso de viaje">
+                    <div class="product-info">
+                        <p>Owala Vaso de viaje</p>
+                        <p class="price">$874.59</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/41rB4gJd9ZL._AC_SY400_.jpg" alt="Owala Botella de silicona">
+                    <div class="product-info">
+                        <p>Owala Botella de</p>
+                        <p class="price">$202.71</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/41qL+S8t4JL._AC_SY400_.jpg" alt="Owala SmoothSip Bottle">
+                    <div class="product-info">
+                        <p>Owala SmoothSip...</p>
+                        <p class="price">$560.04</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#">Ver más</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Promociones en Hogar</h2>
+            </div>
+            <div class="card-content" style="grid-template-columns: 1fr;">
+                <div class="promotion-grid">
+                    <div class="promotion-grid-item">
+                        <img src="https://m.media-amazon.com/images/I/51p6K-8oM8L._AC_SY400_.jpg" alt="Capsulas de café">
+                        <div class="discount">-24%</div>
+                    </div>
+                    <div class="promotion-grid-item">
+                        <img src="https://m.media-amazon.com/images/I/61N+V3qL8pL._AC_SY400_.jpg" alt="Caja de colores">
+                        <div class="discount">-38%</div>
+                    </div>
+                </div>
+                <div class="full-width-image promotion-product">
+                    <img src="https://m.media-amazon.com/images/I/61Q654e9zQL._AC_SY400_.jpg" alt="Lavadora">
+                    <div class="discount">-24%</div>
+                </div>
+                <div class="full-width-image promotion-product">
+                    <img src="https://m.media-amazon.com/images/I/61t+gN-13L._AC_SY400_.jpg" alt="Cafetera">
+                    <div class="discount">-31%</div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#">Ver más</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Los más vendidos en Deportes y Aire Libre</h2>
+            </div>
+            <div class="card-content" style="grid-template-columns: 1fr;">
+                <div class="sport-product-grid">
+                    <div class="product product-large">
+                        <img src="https://m.media-amazon.com/images/I/61y8c5A+6hL._AC_SY400_.jpg" alt="Pesas de tobillo">
+                    </div>
+                    <div class="product product-large">
+                        <img src="https://m.media-amazon.com/images/I/41xGq4d7+qL._AC_SY400_.jpg" alt="Bolsa de yoga">
+                    </div>
+                    <div class="product product-large">
+                        <img src="https://m.media-amazon.com/images/I/51+nE3b+TUL._AC_SY400_.jpg" alt="Bandas de resistencia">
+                    </div>
+                    <div class="product product-large">
+                        <img src="https://m.media-amazon.com/images/I/51Qx0P5n8bL._AC_SY400_.jpg" alt="Correas para pesas">
+                    </div>
+                    <div class="product product-large">
+                        <img src="https://m.media-amazon.com/images/I/419d2L688CL._AC_SY400_.jpg" alt="Caminadora">
+                    </div>
+                    <div class="product product-large">
+                        <img src="https://m.media-amazon.com/images/I/512G9F-H-YL._AC_SY400_.jpg" alt="Juego de bandas de resistencia">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Hasta 50% en mochilas y maletas</h2>
+            </div>
+            <div class="card-content" style="grid-template-columns: 1fr;">
+                <div class="full-width-image">
+                    <img src="https://m.media-amazon.com/images/I/614S37-B3HL._AC_SY400_.jpg" alt="Maleta de viaje">
+                </div>
+                <div class="bag-grid">
+                    <div class="bag-product">
+                        <p>Samsonite</p>
+                    </div>
+                    <div class="bag-product">
+                        <img src="https://m.media-amazon.com/images/I/41-Yv+18kVL._AC_SY400_.jpg" alt="Mochila Kipling">
+                        <p>Kipling</p>
+                    </div>
+                    <div class="bag-product">
+                        <img src="https://m.media-amazon.com/images/I/417Y3g2sYhL._AC_SY400_.jpg" alt="Maleta American Tourist">
+                        <p>American...</p>
+                    </div>
+                    <div class="bag-product">
+                        <img src="https://m.media-amazon.com/images/I/41u6877G7tL._AC_SY400_.jpg" alt="Bolsa Puma">
+                        <p>PUMA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#">Ver más</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
